@@ -1,81 +1,43 @@
-# Vairagya
+# vairagya
 
-Digital Detox Coach - monitor screen time, detect addictive usage patterns, and receive personalized digital wellness guidance.
+**Vairagya — Digital Detox Coach. AI-guided digital wellness and screen time management.**
 
-*Vairagya (Sanskrit: dispassion/detachment) - the practice of cultivating non-attachment.*
+![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
 
-## Features
-
-- **Screen Time Tracking** - Log and categorize app usage by category
-- **Notification Analysis** - Count and categorize notification interruptions
-- **Pattern Detection** - Identify addictive patterns: doom scrolling, compulsive checking, late night use
-- **Detox Goals** - Set and track screen time limits per category
-- **Wellness Challenges** - 20+ digital wellness challenges for gradual improvement
-- **Personalized Advice** - AI-generated reduction strategies based on your patterns
-- **Usage Simulation** - Generate realistic usage data for testing
-- **Rich Reports** - Beautiful terminal output with Rich
-
-## Installation
-
+## Install
 ```bash
-pip install -e .
+pip install -e ".[dev]"
 ```
 
-## Usage
-
-### Track Screen Time
-
-```bash
-vairagya track --app Instagram --category social_media --duration 45
+## Quick Start
+```python
+from src.core import Vairagya
+ instance = Vairagya()
+r = instance.manage(input="test")
 ```
 
-### Analyze Notifications
-
+## CLI
 ```bash
-vairagya notifications --simulate
+python -m src status
+python -m src run --input "data"
 ```
 
-### Detect Usage Patterns
+## API
+| Method | Description |
+|--------|-------------|
+| `manage()` | Manage |
+| `automate()` | Automate |
+| `schedule()` | Schedule |
+| `execute()` | Execute |
+| `get_status()` | Get status |
+| `optimize()` | Optimize |
+| `get_stats()` | Get stats |
+| `reset()` | Reset |
 
+## Test
 ```bash
-vairagya patterns --simulate
+pytest tests/ -v
 ```
-
-### Set a Detox Goal
-
-```bash
-vairagya goals set --category social_media --daily-limit 60
-```
-
-### Get a Challenge
-
-```bash
-vairagya challenge
-```
-
-### Get Wellness Advice
-
-```bash
-vairagya advise --simulate
-```
-
-### Generate Report
-
-```bash
-vairagya report --simulate
-```
-
-## Categories
-
-- Social Media (Instagram, TikTok, Twitter/X, Facebook, Reddit)
-- Entertainment (YouTube, Netflix, Twitch, Spotify)
-- Communication (WhatsApp, Slack, Discord, Email)
-- Productivity (VSCode, Notion, Google Docs)
-- News (News apps, RSS readers)
-- Gaming (Mobile games, Steam)
-- Shopping (Amazon, eBay)
-- Browsing (Chrome, Safari, Firefox)
 
 ## License
-
-MIT
+(c) 2026 Officethree Technologies. All Rights Reserved.
